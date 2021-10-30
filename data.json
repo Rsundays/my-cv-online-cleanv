@@ -1,0 +1,221 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi there",
+        "How are you",
+        "Is anyone there?",
+        "Hey",
+        "Hola",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello!",
+        "Good to see you",
+        "Hi there, how can I help?"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Nice chatting to you, bye",
+        "Till next time"
+      ],
+      "responses": [
+        "See you!",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Awesome, thanks",
+        "Thanks for helping me",
+        "Gracias"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "noanswer",
+      "patterns": [],
+      "responses": [
+        "Sorry, I can't understand you",
+        "Please give me more info",
+        "Not sure I understand"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "options",
+      "patterns": [
+        "How you could help me?",
+        "What you can do?",
+        "What help do you provide?",
+        "How can you be helpful?",
+        "How can you help me?",
+        "What can you do?",
+        "What can I ask you?",
+        "What can you tell me about Luis?",
+        "Can you give me any hints about what you do?",
+        "Can explain how you did this website?",
+        "What tools have you used for the web?"
+      ],
+      "responses": [
+        "I can respond some of the typical questions, like hobbies, professional experience, skills, strengths, myself or if you want to know more about this website.",
+        "You can ask about hobbies, professional experience, skills, strengths, myself or if you want to know more about this website.",
+        "My main purpose is to provide additional information like hobbies, additional professional experience, skills, education or if you want to know more about this website.",
+        "I am instructed to answer some of the typical questions about myself, hobbies, additional experience or this web but I wont provide any credit card information :)"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "hobbies",
+      "patterns": [
+        "What are your hobbies?",
+        "What are his hobbies?",
+        "What does he like to do?",
+        "Hobbies",
+        "What are Luis´ hobbies?",
+        "What does he like to do in his free time?",
+        "What do you like to do?"
+      ],
+      "responses": [
+        "Hmm...I like to do indoor and outdoor sports and I really enjoy DIY projects like an automatic watering plant system, this is my last one. :). And of course, I love traveling and getting to know new places and people! \uD83D\uDE97 \uD83D\uDE84 ✈ ⛵ \uD83D\uDE80",
+        "I enjoy a good DIY IT project and also sports, indoor and outdoor and lately I am enjoying coding my own little projects and ideas \uD83D\uDE0A. I also love traveling every time I can find some time and money!!",
+        "I really like music and sports and I have been coding for a while now which sometimes I do it just for fun... \uD83E\uDD13. Like this video game that I programmed following a course about Unity and C#: <a href='https://rsundays.itch.io/together-we-can?secret=KVQ2T5XZi8UNduB5vDLUBhSTU'>My RACE GAME</a> A secret...the music is done by one of my friends and I!"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "experience",
+      "patterns": [
+        "Experience",
+        "Do you have any additional experience?",
+        "Where have you worked apart from FedEx?",
+        "What did you do before FedEx?",
+        "Any other professional experience?",
+        "What other companies have you worked for?"
+      ],
+      "responses": [
+        "Before FedEx, I used to work for Ernst & Young and Xerox as IT Engineer in Dublin. Yup, I lived in Ireland too.",
+        "I worked in Ernst & Young as IT Engineer for 1 year and as Technical Support Specialist for Xerox before that."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "myself",
+      "patterns": [
+        "Yourself",
+        "Can you tell me something else about yourself?",
+        "What are your strengths and weaknesses?",
+        "Can you describe yourself?",
+        "Do you work better along or on a team?",
+        "How do you describe yourself?",
+        "Tell me about yourself"
+      ],
+      "responses": [
+        "I am an independent professional who enjoys working in a team, sharing and learning from others. I am always down to get to know new people so I guess networking is not only part of my educational and professional background \uD83D\uDE01. Strengths and weaknesses...I'll share those in person \uD83D\uDE1C"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "accomplishments",
+      "patterns": [
+        "What is your biggest accomplishment?",
+        "What would you say is a memorable accomplishment?",
+        "Would you highlight something as your accomplishment?",
+        "Would you highlight something from your career?"
+      ],
+      "responses": [
+        "One of my biggest professional accomplishments is becoming an architect who is responsible for designing advance technical solutions for Europe. It is always a challenge that I am willing to jump on! ✊",
+        "I started in FedEx looking after the IT systems in Spain and I managed to become one of the main Voice Architects in charge of designing solution at European level. On top of that, I enjoy teaching and sharing what I learn and I have been training colleagues for a while now! \uD83D\uDC68\u200D\uD83C\uDFEB"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "dates",
+      "patterns": [
+        "When did you finish your studies?",
+        "When did you start working for FedEx?",
+        "How many years did you leave in Ireland?",
+        "What year did you become a Network Architect?"
+      ],
+      "responses": [
+        "Well, right after I finish my professional studies in Antonio Machado around 2005 and after working for a year in Spain in an IT consultancy company, I moved to Dublin where I spend 2 years working to finally move back to Spain in 2008 to start working for FedEx and continue studying to get my bachelors degree and my MBA. ✍"
+      ],
+      "context": [
+        "experience"
+      ]
+    },
+    {
+      "tag": "website-coding",
+      "patterns": [
+        "What did you use to make this website?",
+        "What programming languages have you used for the web?",
+        "What programming languages do you know?",
+        "what do you use for your backend?",
+        "Why did you create a website?",
+        "What can you tell me about this web site?"
+      ],
+      "responses": [
+        "This web uses Flask as the main web development framework with some libraries to handle the Backend like postgresql, oAuth, tensorflow, bootstrap, ntlk and some others. Of course HTML5 and CSS take care of the Frontend. If you are curious about something, drop me a note! and BTW, I got pictures from unplash which is great! and inspiration and templates from HTML5 UP. \uD83D\uDC69\u200D\uD83D\uDCBB",
+        "I decided to create this digital version of my CV mainly to keep working on my Python Skills which is a journey that I am enjoying. Before that, I have studied JavaScript, nodejs, a little bit of React. And even before that I followed a course of C# where I programmed my first mini video game during the pandemic. Check out the link and drop me a note if you managed to finish the game!! And you can also check <a href='http://www.yomigisselstyling.com/'> YomiGisselStyling </a> as one of my first projects. "
+      ],
+      "context": [
+        ""
+      ]
+    },
+        {
+      "tag": "goals",
+      "patterns": [
+        "What are your goals?",
+        "Do you have any specific professional goal?",
+        "What would you like to do next with your career?",
+        "what next?",
+        "Would you change your career for something else?",
+        "Are you looking for a change?"
+      ],
+      "responses": [
+        "I am happy doing what I do because it is very challenging and rewarding, designing something and seeing it in action, but I also have many ideas and projects that I am currently working keeping me excited!",
+        "I am passionate about my current job and what I do. It has been a a while!! But I am always percolating ideas and who knows? I might just fall in love with one of them and go for it!"
+      ],
+      "context": [
+        ""
+      ]
+    }
+  ]
+}

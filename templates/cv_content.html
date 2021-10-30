@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% import "bootstrap/wtf.html" as wtf %}
+<head>
+    <title>List Of Content</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
+</head>
+<body>
+<div class="container">
+<h3>CV sections</h3>
+
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='section_body') }}
+    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+
+    {% if section_id == 4 %}
+    <p>Do not forget to add the following class to each li element to display the icons:
+    <br>Example: < li  class="icon solid fa-code">Python, C#, Node < li >
+    <br>Other examples of icons: fa-cubes, fa-book, fa-bolt, fa-users
+    <br> Get more from <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2"> FontAwesome</a> </p>
+    {% elif section_id == 5 %}
+    <p> Enter this for each accomplishment:
+        <br>< article >
+                        < a href="#" class="image" >< img src="images/pic01.jpg" alt="" >< a >
+                        < div class="inner" >
+                            < h4 >Possibly broke spacetime /h4 >
+                            < p> Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus
+                                integer adipiscing ornare amet. /p >
+                        /div > < article ></p>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

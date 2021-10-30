@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+{% import "bootstrap/wtf.html" as wtf %}
+<head>
+    <title>Luis Ruiz Lopez CV</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
+
+</head>
+<body class="is-preload">
+
+<!-- Header -->
+<section id="header">
+
+    <header>
+        <span class="image avatar"><img
+                src="https://media-exp1.licdn.com/dms/image/C5603AQEtilMFeKuEDA/profile-displayphoto-shrink_400_400/0/1551688286738?e=1638403200&v=beta&t=oioA49Y1spDvsr_OrAIlWD3MAl1-JAwLuD4kN5j4TLg"
+                alt="Profile Pic from LinkedIn"/></span>
+        <h1 id="logo"><a href="#">Luis Ruiz</a></h1>
+        <p>A Telecom Engineer with a MBA and passion for Technology</p>
+    </header>
+    <nav id="nav">
+        <ul>
+            <li><a href="#one" class="active">{{ sections[0].title}}</a></li>
+            <li><a href="#two">{{ sections[1].title }}</a></li>
+            <li><a href="#three">{{ sections[2].title }}</a></li>
+            <li><a href="#four">{{ sections[3].title }}</a></li>
+            <li><a href="#five">{{ sections[4].title }}</a></li>
+            <li><a href="#six">Contact</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/luis-ruiz-lopez-291b8039/" class="icon brands fa-fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        </ul>
+    </footer>
+
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section id="one">
+            <div class="image main" data-position="center">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80"
+                     title="Photo by NASA on Unsplash.com">
+  "/>
+            </div>
+            <div class="container">
+                <header class="major">
+                    <h3>Thank you for passing by!</h3>
+                    {% if user['email'] == email_account: %}
+                    <a href="{{ url_for('update', section_id=sections[0].id) }}">
+                        <h2>{{ sections[0].title }}</h2>
+                    </a>
+                    {% else %}
+                        <h2>{{ sections[0].title }}</h2>
+                    {% endif %}
+                </header>
+
+                <p>{{ sections[0].body | safe}}</p>
+            </div>
+        </section>
+
+        <!-- Two -->
+        <section id="two">
+            <div class="container">
+                {% if user['email'] == email_account: %}
+                <a href="{{ url_for('update', section_id=sections[1].id) }}">
+                    <h3>{{ sections[1].title }}</h3>
+                </a>
+                {% else %}
+                    <h3>{{ sections[1].title }}</h3>
+                {% endif %}
+                <p>{{ sections[1].body | safe}}</p>
+            </div>
+        </section>
+
+
+        <!-- Three -->
+        <section id="three">
+            <div class="container">
+                {% if user['email'] == email_account: %}
+                <a href="{{ url_for('update', section_id=sections[2].id) }}">
+                    <h3>{{ sections[2].title }}</h3>
+                </a>
+                {% else %}
+                    <h3>{{ sections[2].title }}</h3>
+                {% endif %}
+                <p>{{ sections[2].body | safe}}</p>
+            </div>
+        </section>
+
+        <!-- Four -->
+        <section id="four">
+            <div class="container">
+                {% if user['email'] == email_account: %}
+                <a href="{{ url_for('update', section_id=sections[3].id) }}">
+                    <h3>{{ sections[3].title }}</h3>
+                </a>
+                {% else %}
+                    <h3>{{ sections[3].title }}</h3>
+                {% endif %}
+                <p>{{ sections[3].description | safe }}</p>
+                <ul class="feature-icons">
+                    {{ sections[3].body | safe }} ->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Five -->
+        <section id="five">
+            <div class="container">
+                {% if user['email'] == email_account: %}
+                <a href="{{ url_for('update', section_id=sections[4].id) }}">
+                    <h3>{{ sections[4].title }}</h3>
+                </a>
+                {% else %}
+                    <h3>{{ sections[4].title }}</h3>
+                {% endif %}
+                <p>{{ sections[4].description | safe }}</p>
+                <div class="features">
+                    {{ sections[4].body | safe}}
+                </div>
+            </div>
+        </section>
+
+        <!-- Six -->
+        <section id="six">
+            <div class="container">
+                <h3>Contact Me</h3>
+                <p>Like with any other resume, you cannot cover everything in one page, not even in one landing page!
+                Therefore, if you want to discuss projects, ideas or any other thing, you can either talk to my own
+                personal bot by clicking on the little icon, or fill up this form, and I will get a notification.
+                <br>Or you can just contact me through LinkedIn</p>
+
+                <form method="post">
+                    {{ form.csrf_token() }}
+                    <div class="row gtr-uniform">
+                        {{ form.hidden_tag() }}
+                        {{ wtf.form_errors(form, hiddens="only") }}
+                        <div class="col-6 col-12-xsmall">
+                            {{ wtf.form_field(form.name, id="name") }}
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            {{ wtf.form_field(form.email, id="email") }}
+                        </div>
+                        <div class="col-12">{{ wtf.form_field(form.subject, id="subject") }}</div>
+                        <div class="col-12">{{ wtf.form_field(form.message, rows=6, id="message") }}</div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li>{{ wtf.form_field(form.submit, button_map = {"submit" : "primary"}) }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+    <a href="{{ url_for('chatbot') }}" target="_blank" class="float_but">
+        <i class="fa fa-robot fa-2x my-float_bt"></i>
+
+    </a>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container">
+            <ul class="copyright">
+                <li>&copy; Luis Ruiz Lopez - {{year}}. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+</html>
