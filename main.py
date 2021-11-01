@@ -15,7 +15,7 @@ from notifications_center import Notifications
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY", None)
-app.config['SERVER_NAME'] = 'localhost:5000'
+# app.config['SERVER_NAME'] = 'localhost:5000'
 ckeditor = CKEditor(app)
 Bootstrap(app)
 oauth = OAuth(app)
