@@ -22,6 +22,7 @@
     </header>
     <nav id="nav">
         <ul>
+            {% if sections: %}
             <li><a href="#one" class="active">{{ sections[0].title}}</a></li>
             <li><a href="#two">{{ sections[1].title }}</a></li>
             <li><a href="#three">{{ sections[2].title }}</a></li>
@@ -175,7 +176,9 @@
             </ul>
         </div>
     </section>
-
+    {% else: %}
+        <h1>Content is currently being updates.  Try again later</h1>
+    {% endif %}
 </div>
 
 <!-- Scripts -->
