@@ -7,6 +7,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6FRQW986H"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y6FRQW986H');
+
+    </script>
 
 </head>
 <body class="is-preload">
@@ -34,7 +44,8 @@
     </nav>
     <footer>
         <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/luis-ruiz-lopez-291b8039/" class="icon brands fa-fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.linkedin.com/in/luis-ruiz-lopez-291b8039/" class="icon brands fa-fa-linkedin"><span
+                    class="label">LinkedIn</span></a></li>
         </ul>
     </footer>
 
@@ -49,9 +60,9 @@
         <!-- One -->
         <section id="one">
             <div class="image main" data-position="center">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80"
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=872&q=80"
                      title="Photo by NASA on Unsplash.com">
-  "/>
+                "/>
             </div>
             <div class="container">
                 <header class="major">
@@ -61,7 +72,7 @@
                         <h2>{{ sections[0].title }}</h2>
                     </a>
                     {% else %}
-                        <h2>{{ sections[0].title }}</h2>
+                    <h2>{{ sections[0].title }}</h2>
                     {% endif %}
                 </header>
 
@@ -77,7 +88,7 @@
                     <h3>{{ sections[1].title }}</h3>
                 </a>
                 {% else %}
-                    <h3>{{ sections[1].title }}</h3>
+                <h3>{{ sections[1].title }}</h3>
                 {% endif %}
                 <p>{{ sections[1].body | safe}}</p>
             </div>
@@ -92,7 +103,7 @@
                     <h3>{{ sections[2].title }}</h3>
                 </a>
                 {% else %}
-                    <h3>{{ sections[2].title }}</h3>
+                <h3>{{ sections[2].title }}</h3>
                 {% endif %}
                 <p>{{ sections[2].body | safe}}</p>
             </div>
@@ -106,7 +117,7 @@
                     <h3>{{ sections[3].title }}</h3>
                 </a>
                 {% else %}
-                    <h3>{{ sections[3].title }}</h3>
+                <h3>{{ sections[3].title }}</h3>
                 {% endif %}
                 <p>{{ sections[3].description | safe }}</p>
                 <ul class="feature-icons">
@@ -123,7 +134,7 @@
                     <h3>{{ sections[4].title }}</h3>
                 </a>
                 {% else %}
-                    <h3>{{ sections[4].title }}</h3>
+                <h3>{{ sections[4].title }}</h3>
                 {% endif %}
                 <p>{{ sections[4].description | safe }}</p>
                 <div class="features">
@@ -137,9 +148,9 @@
             <div class="container">
                 <h3>Contact Me</h3>
                 <p>Like with any other resume, you cannot cover everything in one page, not even in one landing page!
-                Therefore, if you want to discuss projects, ideas or any other thing, you can either talk to my own
-                personal bot by clicking on the little icon, or fill up this form, and I will get a notification.
-                <br>Or you can just contact me through LinkedIn</p>
+                    Therefore, if you want to discuss projects, ideas or any other thing, you can either talk to my own
+                    personal bot by clicking on the little icon, or fill up this form, and I will get a notification.
+                    <br>Or you can just contact me through LinkedIn</p>
 
                 <form method="post">
                     {{ form.csrf_token() }}
@@ -178,7 +189,7 @@
         </div>
     </section>
     {% else: %}
-        <h1>Content is currently being updates.  Try again later</h1>
+    <h1>Content is currently being updates. Try again later</h1>
     {% endif %}
 </div>
 
