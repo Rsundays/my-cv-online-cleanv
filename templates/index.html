@@ -16,6 +16,11 @@
 
   gtag('config', 'G-Y6FRQW986H');
 
+
+
+
+
+
     </script>
 
 </head>
@@ -178,8 +183,17 @@
     </div>
     <a href="{{ url_for('chatbot') }}" target="_blank" class="float_but">
         <i class="fa fa-robot fa-2x my-float_bt"></i>
-
     </a>
+    <!-- Cookie and Privacy Policy Consent -->
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        This website is using cookies. You consent to our cookies if you continue to use our website. Click on <a
+            href="{{ url_for('cookies')}}" target="_blank">Cookies Policy</a> or <a href="{{ url_for('privacy')}}"
+                                                                                    target="_blank"> Privacy Policy</a>
+        for more info.
+        <a class="cookieConsentOK">That's
+            Fine</a>
+    </div>
     <!-- Footer -->
     <section id="footer">
         <div class="container">
@@ -189,7 +203,7 @@
         </div>
     </section>
     {% else: %}
-    <h1>Content is currently being updates. Try again later</h1>
+    <h1>Content is currently being updated. Try again later</h1>
     {% endif %}
 </div>
 
